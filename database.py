@@ -6,3 +6,5 @@ mongo = PyMongo()
 def init_db(app):
     app.config["MONGO_URI"] = Config.MONGO_URI
     mongo.init_app(app)
+    if mongo.db is None:
+        raise Exception("Mongo was not initialized properly.")

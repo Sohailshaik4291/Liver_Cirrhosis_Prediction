@@ -14,9 +14,6 @@ import json
 with open("static/model_metrics.json", "r") as f:
     model_metrics = json.load(f)
 
-
-
-
 app = Flask(__name__)
 app.config.from_object(Config)
 app.config["SESSION_TYPE"] = "filesystem"
